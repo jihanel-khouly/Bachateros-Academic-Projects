@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  @apply bg-black text-white font-sans;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Brutalist Typography */
+.text-brutalist-xl {
+  @apply text-6xl md:text-7xl font-black tracking-tighter uppercase;
+  letter-spacing: -0.02em;
+}
+
+.text-brutalist-lg {
+  @apply text-4xl md:text-5xl font-bold tracking-tight uppercase;
+}
+
+.text-brutalist-md {
+  @apply text-2xl md:text-3xl font-bold tracking-tight;
+}
+
+.text-brutalist-sm {
+  @apply text-lg font-bold uppercase tracking-wider;
+}
+
+/* Red Divider */
+.red-divider {
+  @apply w-full h-1 bg-red-500;
+}
+
+/* Brutalist Button */
+.btn-brutalist {
+  @apply bg-red-500 text-white px-8 py-3 font-bold uppercase tracking-wider hover:bg-red-600 active:bg-red-700 transition-colors;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-brutalist:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.btn-brutalist-outline {
+  @apply border-2 border-red-500 text-red-500 px-8 py-3 font-bold uppercase tracking-wider hover:bg-red-500 hover:text-white transition-colors;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Card */
+.card-brutalist {
+  @apply bg-zinc-900 border border-zinc-700 p-6 md:p-8;
+}
+
+/* Input */
+.input-brutalist {
+  @apply bg-zinc-900 border border-zinc-700 text-white px-4 py-2 focus:outline-none focus:border-red-500 transition-colors;
+}
+
+.input-brutalist::placeholder {
+  @apply text-gray-500;
+}
+
+/* Container */
+.center-container {
+  @apply flex items-center justify-center min-h-screen;
+}
+
+/* Grid */
+.grid-brutalist {
+  @apply grid gap-6 md:gap-8;
+}
+
+/* Sidebar */
+.sidebar-brutalist {
+  @apply fixed left-0 top-0 h-screen w-64 bg-black border-r border-zinc-700 p-6 overflow-y-auto;
+}
+
+.sidebar-brutalist-item {
+  @apply block px-4 py-3 text-white hover:bg-zinc-900 hover:text-red-500 transition-colors uppercase text-sm font-bold tracking-wider;
+}
+
+.sidebar-brutalist-item.active {
+  @apply bg-red-500 text-white;
+}
