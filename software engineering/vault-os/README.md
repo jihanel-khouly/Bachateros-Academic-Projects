@@ -40,7 +40,7 @@ A professional, secure credential vault web application built with a bold **Brut
 ## Project Structure
 
 ```
-jihan_password_manager/
+valut-os/
 ├── backend/
 │   ├── routes/
 │   │   ├── auth.js              # Registration & login
