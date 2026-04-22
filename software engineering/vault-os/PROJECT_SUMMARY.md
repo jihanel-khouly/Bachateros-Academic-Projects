@@ -96,43 +96,40 @@ A professional full-stack web application for secure credential management with 
 ## File Structure
 
 ```
-/home/ubuntu/jihan_password_manager/
-│
+valut-os/
 ├── backend/
 │   ├── routes/
-│   │   ├── auth.js                 # 70 lines - Registration & login
-│   │   ├── masterPassword.js       # 60 lines - Master password operations
-│   │   └── credentials.js          # 140 lines - Credential CRUD
-│   ├── encryption.js               # 60 lines - AES-256 encryption utilities
-│   ├── middleware.js               # 35 lines - JWT & error handling
-│   ├── db.js                       # 25 lines - Database connection
-│   ├── server.js                   # 40 lines - Express server setup
-│   ├── database.sql                # Database schema
+│   │   ├── auth.js              # Registration & login
+│   │   ├── masterPassword.js    # Master password setup & verify
+│   │   └── credentials.js       # Credential CRUD operations
+│   ├── encryption.js            # AES-256 encryption utilities
+│   ├── middleware.js            # JWT authentication & error handling
+│   ├── db.js                    # Database connection pool
+│   ├── database.sql             # Database schema
+│   ├── server.js                # Express server entry point
 │   ├── package.json
 │   └── .env.example
 │
 ├── frontend/
 │   ├── src/
 │   │   ├── pages/
-│   │   │   ├── Login.jsx           # 80 lines - Login page
-│   │   │   ├── Register.jsx        # 110 lines - Registration page
-│   │   │   └── Dashboard.jsx       # 100 lines - Main dashboard
+│   │   │   ├── Login.jsx        # Login page
+│   │   │   ├── Register.jsx     # Registration page
+│   │   │   └── Dashboard.jsx    # Main vault dashboard
 │   │   ├── components/
-│   │   │   ├── MasterPasswordSetup.jsx  # 70 lines
-│   │   │   └── CredentialsVault.jsx     # 200 lines
-│   │   ├── api.js                  # 50 lines - API client
-│   │   ├── App.jsx                 # 40 lines - Root component
-│   │   ├── main.jsx                # 10 lines - Entry point
-│   │   └── index.css               # 100 lines - Brutalist styles
+│   │   │   ├── MasterPasswordSetup.jsx
+│   │   │   └── CredentialsVault.jsx
+│   │   ├── api.js               # API client
+│   │   ├── App.jsx              # Root component
+│   │   ├── main.jsx             # React entry point
+│   │   └── index.css            # Global styles
 │   ├── index.html
 │   ├── vite.config.js
 │   ├── tailwind.config.js
 │   ├── postcss.config.js
 │   └── package.json
 │
-├── README.md                        # Comprehensive documentation
-├── PROJECT_SUMMARY.md              # This file
-└── .gitignore
+└── README.md
 ```
 
 ---
