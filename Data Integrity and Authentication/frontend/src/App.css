@@ -1,0 +1,158 @@
+/* ============================================================================
+   MODERN TECH DESIGN SYSTEM
+   Minimalist, Clean, and Professional Security Aesthetic
+   ============================================================================ */
+
+:root {
+  --bg-main: #fcfcfd;
+  --text-main: #111827;
+  --text-muted: #4b5563;
+  --border-light: #e5e7eb;
+  --accent-primary: #2563eb;
+  --accent-secondary: #0f172a;
+  --white: #ffffff;
+  
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
+  
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2.5rem;
+  --spacing-xl: 4rem;
+  
+  --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* AUTH PAGES - Fix for stretching issues */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+  background-color: var(--bg-main);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px; /* Constraints the width to prevent stretching */
+  background: var(--white);
+  padding: var(--spacing-lg);
+  border-radius: 16px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.text-center { text-align: center; }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+
+/* FORMS */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+input, select#role {
+  width: 100%;
+  background-color: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  transition: var(--transition-fast);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+/* BUTTONS */
+.btn {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  font-family: var(--font-main);
+  text-align: center;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--accent-secondary);
+  color: var(--white);
+}
+
+.btn-secondary {
+  background-color: var(--white);
+  border: 1px solid var(--border-light);
+  color: var(--text-main);
+}
+
+.alert-error {
+  background-color: #fef2f2;
+  color: #991b1b;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  border: 1px solid #fee2e2;
+}
+/* Add these specific rules to your App.css */
+
+/* 1. Ensure the container takes full height and centers content */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-main);
+}
+
+/* 2. Style the 2FA input specifically to look clean */
+input#code {
+  letter-spacing: 0.8rem; /* Increased for better readability */
+  padding: 1rem;
+  border: 2px solid var(--border-light);
+  background-color: #fafafa;
+  margin-top: 0.5rem;
+}
+
+input#code:focus {
+  border-color: var(--accent-primary);
+  background-color: var(--white);
+}
+
+/* 3. Add a divider style if you use it */
+.divider {
+  height: 1px;
+  background: var(--border-light);
+  margin: 1rem auto;
+  width: 50px;
+}
